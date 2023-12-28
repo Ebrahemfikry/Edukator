@@ -1,0 +1,456 @@
+:root{
+    --main-color:#ff9900;
+    --blue-color:#202e3b;
+    --white-color:#fff;
+    --black-color:#000;
+    --gray-color:#777;
+    --gray2-color:#f9f9f9;
+    --red-color:#ed1c24;
+    --transition: all .4s;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    position: relative;
+    height: 70vh;
+    background: url(../images/banner3.jpg) no-repeat center/cover;
+}
+header::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000006a;
+}
+header .nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .nav {
+    position: sticky;
+    /* top: 0; */
+    padding: 10px 0;
+    z-index: 44443;
+    width: 100%;
+}
+header .nav .container .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .nav .container .logo i{
+    font-size: 35px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+header .nav .container .logo h1{
+    font-size: 35px;
+    color: var(--white-color);
+    font-weight: bold;
+    margin: 0 5px;
+}
+header .nav .container ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+header .nav .container ul li{
+    margin: 0 10px;
+    font-size: 20px;
+}
+header .nav .container ul li a{
+    text-decoration: none;
+    color: var(--white-color);
+    transition: var(--transition);
+}
+header .nav .container ul .icon-dark i{
+    font-size: 25px;
+    color: var(--white-color);
+    font-weight: bold;
+    margin: 6px 0 0 30px;
+}
+header .landing{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 333;
+}
+header .landing .container p{
+    color: var(--white-color);
+    font-size: 18px;
+}
+header .landing .container h2{
+    color: var(--white-color);
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.menu{
+    color: var(--white-color);
+    font-size: 30px;
+    display: none;
+}
+.offcanvas{
+    position: absolute;
+    z-index: 999999999;
+    background: var(--gray-color)
+}
+.offcanvas .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.offcanvas .logo i{
+    font-size: 35px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.offcanvas .logo h1{
+    font-size: 35px;
+    color: var(--white-color);
+    font-weight: bold;
+    margin: 0 5px;
+}
+.offcanvas ul{
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+.offcanvas ul li{
+    margin: 30px 0;
+}
+.offcanvas ul li a{
+    font-size: 20px;
+    color: var(--white-color);
+    text-decoration: none;
+}
+.offcanvas ul .icon-dark i{
+    font-size: 25px;
+    color: var(--white-color);
+    font-weight: bold;
+}
+@media screen and (max-width: 600px){
+    header .nav .container ul {
+        display: none;
+    }
+    header .landing .container{
+        flex-direction: column;
+    }
+    .menu{      
+        display: block;
+    }
+}
+@media screen and (min-width: 600px){
+    header .nav .container ul {
+        display: none;
+    }
+    header .landing .container{
+        flex-direction: column;
+    }
+    .menu{      
+        display: block;
+    }
+}
+@media screen and (min-width: 768px){
+    header .nav .container ul {
+        display: none;
+    }
+    header .landing .container{
+        flex-direction: column;
+    }
+    .menu{      
+        display: block;
+    }
+}
+@media screen and (min-width: 992px){
+    header .nav .container ul {
+        display: flex;
+    }
+    header .landing .container{
+        flex-direction: row;
+        flex-flow: row wrap;
+    }
+    .menu{      
+        display: none;
+    }
+}
+@media screen and (min-width: 1200px){
+    header .nav .container ul {
+        display: flex;
+    }
+    header .landing .container{
+        flex-direction: row;
+        flex-flow: row wrap;
+    }
+    .menu{      
+        display: none;
+    }
+}
+
+
+
+
+/* start contain ########################## */
+.h2{
+    color:var(--black-color)
+}
+.contain {
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 600px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.contain .box {
+    padding:30px 20px;
+    width: 40%;
+    background-color: var(--blue-color);
+    height: 100%;
+}
+
+.contain .box h2 {
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+.contain .box p {
+    font-size: 18px;
+    color: var(--white-color);
+}
+
+.contain .box .box-link .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contain .box .box-link .box i {
+    font-size: 18px;
+    padding: 10px 15px;
+    color: var(--white-color);
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--white-color);
+    border-radius: 50%;
+    vertical-align: center;
+    margin-right: 20px;
+}
+
+.contain .box .box-link .box h3 {
+    font-size: 16px;
+    color: var(--white-color);
+}
+
+.contain form {
+    padding: 36px;
+    height: 100%;
+    width: 60%;
+    background-color:#fff;
+}
+
+.contain form fieldset {
+    border: 0;
+    margin: 10px 0;
+}
+
+.contain form .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.contain form .content fieldset {
+    width: 49%;
+    margin: 25px 0;
+}
+
+.contain form .content fieldset input {
+    outline: none;
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.contain form fieldset {
+    width: 100%;
+}
+
+.contain form fieldset select {
+    padding: 5px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.contain form fieldset select,
+.contain form fieldset textarea {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.contain form fieldset textarea {
+    border: 1px solid rgb(201, 201, 201);
+    padding: 10px;
+    outline: none;
+}
+
+form input::placeholder,
+form select {
+    color: rgb(201, 201, 201);
+    font-size: 16px;
+}
+
+form button {
+    padding: 5px 20px;
+    font-size: 20px;
+    outline: none;
+    background-color: var(--main-color);
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .contain {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contain .box {
+        width: 100%;
+        height: 100%;
+    }
+    .contain form {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .contain {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contain .box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contain form {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .contain {
+        flex-direction: row;
+    }
+
+    .contain .box {
+        width: 40%;
+        height: 100%;
+    }
+
+    .contain form {
+        width: 60%;
+        height: 100%;
+    }
+}
+/* end contain ########################## */
+
+/* start iframe #################### */
+.iframe{
+    padding: 70px 0;
+}
+/* end iframe #################### */
+
+
+footer{
+    background: var(--blue-color);
+    padding: 40px 0;
+    text-align: center;
+}
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+footer .container .box{
+    width: 24%;
+    margin: 1%;
+}
+footer .container .box h3{
+    color:var(--white-color);
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+footer .container .box p{
+    color:var(--white-color);
+    font-size: 16px;
+}
+footer .container .box a{
+    color:var(--white-color);
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+footer .p{
+    color: var(--white-color);
+    font-size: 16px;
+    margin: 40px 0 0 0;
+}
+
+@media screen and (max-width: 600px){
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container .box{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 600px){
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container .box{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px){
+    footer .container{
+        flex-flow: row wrap;
+    }
+    footer .container .box{
+        width: 48%;
+    }
+}
+@media screen and (min-width: 992px){
+    footer .container{
+        flex-flow: row nowrap;
+    }
+    footer .container .box{
+        width: 24%;
+    }
+}
+@media screen and (min-width: 1200px){
+    footer .container{
+        flex-flow: row nowrap;
+    }
+    footer .container .box{
+        width: 24%;
+    }
+}
